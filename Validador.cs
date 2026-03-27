@@ -51,7 +51,7 @@ namespace ValidadorCNPJ_Novo
 
         private static string RemoveMask(string cnpjCpf)
         {
-            return new string(cnpjCpf.Where(char.IsDigit).ToArray());
+            return new string(cnpjCpf.Where(char.IsLetterOrDigit).ToArray());
         }
 
         private static bool AllDigitsIdentical(string cnpjCpf)
